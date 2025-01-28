@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: Install packages
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - git
+        - docker.io
+        - python3-pip
