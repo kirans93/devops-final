@@ -9,3 +9,18 @@
         - git
         - docker.io
         - python3-pip
+
+    - name: Install Jenkins
+      apt:
+        name: jenkins
+        state: present
+
+    - name: Install Docker Compose
+      apt:
+        name: docker-compose
+        state: present
+
+    - name: Set up testing environment
+      apt:
+        name: python3-venv
+        state: present
